@@ -37,9 +37,9 @@ public class tests extends baseclass{
 		log.loginbtn();
 	}
 	
-//	@AfterMethod
-//	public void close() {
-//		driver.manage().deleteAllCookies();
-//		driver.close();
-//	}
+	@AfterMethod
+	public void close() {
+		driver.manage().deleteAllCookies();
+		driver.close();
+	}
 }

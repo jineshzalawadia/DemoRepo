@@ -1,6 +1,7 @@
 package testlayer;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,12 +25,26 @@ public class MyAccountTabTests extends baseclass{
 	@Test
 	public void cartbutton() {
 		log.cartbtnclick();
-		Assert.assertEquals(true, log.carttext());
-		
+		Assert.assertEquals(true, log.carttext());	
 	}
 	
 	@Test
 	public void orderbtn() {
 		log.order();
+	}
+	
+	@Test
+	public void noorder() {
+		Assert.assertEquals(true, log.NoOrder());
+	}
+	
+	@Test (dependsOnMethods = "noorder")
+	public void shopping() {
+		log.Shopping();
+	}
+	
+	@AfterMethod
+	public void teardown() {
+		driver.close();
 	}
 }

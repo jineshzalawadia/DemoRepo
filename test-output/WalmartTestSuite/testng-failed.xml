@@ -3,14 +3,13 @@
 <suite parallel="tests" name="Failed suite [WalmartTestSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="tests" name="LoginTest(failed)">
     <classes>
-      <class name="testlayer.tests">
+      <class name="testlayer.MyListTabTests">
         <methods>
-          <include name="title"/>
-          <include name="close"/>
-          <include name="login"/>
-          <include name="initsetup"/>
+          <include name="teardown"/>
+          <include name="listtest"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- testlayer.tests -->
+      </class> <!-- testlayer.MyListTabTests -->
     </classes>
   </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [WalmartTestSuite] -->

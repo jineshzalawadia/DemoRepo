@@ -5,8 +5,9 @@
     <classes>
       <class name="testlayer.MyAccountTabTests">
         <methods>
+          <include name="noorder"/>
+          <include name="shopping"/>
           <include name="setup"/>
-          <include name="cartbutton"/>
         </methods>
       </class> <!-- testlayer.MyAccountTabTests -->
     </classes>
